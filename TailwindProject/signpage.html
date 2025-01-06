@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up / Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-500 flex items-center justify-center h-screen">
+  <div class="bg-white p-8 rounded-lg shadow-xl max-w-md w-full">
+    <!-- Header -->
+    <h2 class="text-3xl font-extrabold text-center text-gray-800">Welcome to SkillDrift!</h2>
+    <p class="text-sm text-gray-500 text-center mt-2">Sign in or create an account to get started</p>
+
+    <!-- Form -->
+    <form class="mt-8 space-y-6">
+      <!-- Phone/Email Field -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Phone or Email</label>
+        <input type="text" id="email"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-700"
+          placeholder="Enter your phone or email" required />
+      </div>
+
+      <!-- Password Field with Toggle -->
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+        <div class="relative">
+          <input type="password" id="password"
+            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-700"
+            placeholder="Enter your password" required />
+          <button type="button" id="togglePassword"
+            class="absolute inset-y-0 right-3 flex items-center text-gray-600 hover:text-gray-800 focus:outline-none"
+            aria-label="Toggle password visibility">
+            <svg id="eyeIcon" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-.274.947-1.81 4-9.542 4-7.731 0-9.267-3.053-9.542-4z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Remember Me and Forgot Password -->
+      <div class="flex items-center justify-between">
+        <label class="flex items-center">
+          <input type="checkbox" class="h-4 w-4 text-blue-500 rounded focus:ring-blue-400" />
+          <span class="ml-2 text-sm text-gray-700">Remember me</span>
+        </label>
+        <a href="#" class="text-sm text-blue-500 hover:underline">Forgot Password?</a>
+      </div>
+
+      <!-- Sign-in Button -->
+      <div>
+        <button type="submit"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
+          Sign In
+        </button>
+      </div>
+
+      <!-- Divider -->
+      <div class="relative flex justify-center text-sm">
+        <span class="bg-white px-2 text-gray-500">Or continue with</span>
+        <div class="absolute w-full border-t border-gray-300 top-1/2"></div>
+      </div>
+
+      <!-- Social Media Login -->
+      <div class="grid grid-cols-2 gap-4">
+        <button type="button"
+          class="flex items-center justify-center bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-red-400">
+          Google
+        </button>
+        <button type="button"
+          class="flex items-center justify-center bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-gray-700">
+          Facebook
+        </button>
+      </div>
+    </form>
+
+    <!-- Footer -->
+    <p class="text-sm text-gray-500 text-center mt-6">
+      By signing in, you agree to our <a href="#" class="text-blue-500 hover:underline">Terms</a> and <a href="#"
+        class="text-blue-500 hover:underline">Privacy Policy</a>.
+    </p>
+  </div>
+
+  <!-- JavaScript for Password Toggle -->
+  <script>
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordField = document.getElementById("password");
+    const eyeIcon = document.getElementById("eyeIcon");
+
+    togglePassword.addEventListener("click", () => {
+      // Toggle the type attribute
+      const type = passwordField.type === "password" ? "text" : "password";
+      passwordField.type = type;
+
+      // Toggle the eye icon
+      eyeIcon.innerHTML = type === "password"
+        ? `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-.274.947-1.81 4-9.542 4-7.731 0-9.267-3.053-9.542-4z" />`
+        : `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.98 8.048C3.588 9.034 3.5 10.493 3.5 12c0 4.5 3.5 7.5 8.5 7.5 1.616 0 3.116-.288 4.437-.798M15.2 6.933C14.067 6.333 12.582 6 11 6c-3.5 0-6.5 3-6.5 6s3 6 6.5 6c1.451 0 2.783-.317 3.933-.866" />`;
+    });
+  </script>
+
+</body>
+
+</html>

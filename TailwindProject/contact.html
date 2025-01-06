@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Contact Us - SkillDrift</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  <!-- navbar -->
+  <nav class="w-full h-14 fixed bg-indigo-200 flex justify-between px-4 items-center md:px-4 z-10">
+    <div class="text-2xl text-indigo-700 font-bold">SkillDrift</div>
+    <!-- Navbar for larger screens -->
+    <ul id="navbar"
+      class="md:flex hidden font-semibold flex-col md:flex-row md:static absolute top-0 left-0 w-full h-screen bg-indigo-200 md:h-auto md:bg-transparent justify-center">
+      <li class="mx-[10px] hover:text-red-500 cursor-pointer" onclick="window.location.href='index.html';">Home</li>
+      <li class="mx-[10px] hover:text-red-500 cursor-pointer" onclick="window.location.href='About.html';">About Us</li>
+      <li class="mx-[10px] hover:text-red-500 cursor-pointer" onclick="window.location.href='contact.html';">Contact us
+      </li>
+      <div class="md:hidden absolute top-5 right-5 text-2xl cursor-pointer" id="close">&times;</div>
+    </ul>
+    <!-- Login/Signup button -->
+    <div class="hidden md:block px-2 py-2 bg-indigo-700 text-white rounded font-bold cursor-pointer"
+      onclick="window.location.href='signpage.html';">
+      Login/SignUp
+    </div>
+    <!-- Hamburger menu for smaller screens -->
+    <div id="bar" class="md:hidden text-4xl cursor-pointer">
+      &#8801;
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="relative py-16 bg-white">
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 h-1/3"></div>
+    <div class="relative max-w-7xl mx-auto px-6 sm:px-12 lg:px-20">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+        <!-- Left Content -->
+        <div class="text-center lg:text-left">
+          <h2 class="text-4xl font-extrabold text-gray-800 sm:text-5xl">
+            Get in Touch with <span class="text-blue-500">SkillDrift</span>
+          </h2>
+          <p class="mt-4 text-lg text-gray-600">
+            Have a question or want to learn more? We'd love to hear from you! Fill out the form or contact us directly.
+          </p>
+          <div class="mt-8 space-y-4">
+            <div class="flex items-center space-x-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M3 5a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v4.086a1 1 0 0 1-.293.707l-7.5 7.5a1 1 0 0 1-1.414 0l-7.5-7.5A1 1 0 0 1 3 9.086V5zm2 0v3.586L12 15.586l7-7V5H5zm5 10h4v2h-4v-2z" />
+              </svg>
+              <p class="text-gray-600">Email: <a href="mailto:contact@skilldrift.com"
+                  class="text-blue-500 hover:underline">contact@skilldrift.com</a></p>
+            </div>
+            <div class="flex items-center space-x-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M21 8.59V5a2 2 0 0 0-2-2h-4.59a2 2 0 0 0-1.41.59L10 6.59a2 2 0 0 1-1.41.59H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4.59a2 2 0 0 0 1.41-.59L14 17.41a2 2 0 0 1 1.41-.59H19a2 2 0 0 0 2-2v-3.59a2 2 0 0 0-.59-1.41l-7-7a2 2 0 0 1-.59-1.41V3h4.59A2 2 0 0 0 21 5v3.59z" />
+              </svg>
+              <p class="text-gray-600">Phone: <a href="tel:+1234567890" class="text-blue-500 hover:underline">+91
+                  8953845583</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Form -->
+        <div class="bg-white shadow-lg rounded-lg p-8 lg:p-12">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-6">Contact Form</h3>
+          <form action="#" method="POST" class="space-y-6">
+            <!-- Name -->
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-600">Your Name</label>
+              <input type="text" id="name" name="name"
+                class="mt-2 w-full px-4 py-3 border rounded-lg text-gray-800 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                placeholder="John Doe" required />
+            </div>
+            <!-- Email -->
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-600">Email Address</label>
+              <input type="email" id="email" name="email"
+                class="mt-2 w-full px-4 py-3 border rounded-lg text-gray-800 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                placeholder="john.doe@example.com" required />
+            </div>
+            <!-- Message -->
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-600">Your Message</label>
+              <textarea id="message" name="message" rows="4"
+                class="mt-2 w-full px-4 py-3 border rounded-lg text-gray-800 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                placeholder="Write your message here..." required></textarea>
+            </div>
+            <!-- Submit -->
+            <div>
+              <button type="submit"
+                class="w-full py-3 px-6 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-500 transition duration-300">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="w-full bg-gray-700 text-white pt-8 flex flex-col md:flex-row flex-wrap justify-between md:px-12">
+    <div class="">
+      <img class="w-40 h-16 rounded-full" src="https://rsdcaindia.org/wp-content/uploads/2022/09/skills.jpg" alt="">
+      <p class="my-4"><i class="fas fa-envelope text-gray-400"></i> : Email us: support@skillDrift.com</p>
+      <p class="my-4"><i class="fa-solid fa-phone"></i> Contact Us: +91 7666122288</p>
+      <div class="my-4">
+        <a href="#" class="hover:text-red-500"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="hover:text-red-500"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="hover:text-red-500"><i class="fa-brands fa-telegram"></i></a>
+        <a href="#" class="hover:text-red-500"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="hover:text-red-500"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="hover:text-red-500"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" class="hover:text-red-500"><i class="fa-brands fa-discord"></i></a>
+      </div>
+      <img class="w-32 h-32" src="https://pwclonewebsite.vercel.app/assets/iso-9001-2015.svg" alt="">
+    </div>
+    <div>
+      <h2 class="font-bold text-xl mt-4">SkillDrift skills</h2>
+      <div class="w-32 h-1 border-b-2 border-yellow-400 rounded-2xl my-2"></div>
+      <div class="">
+        <p onclick="window.location.href='About.html';" class="hover:text-red-500 cursor-pointer">About</p>
+        <p>FAQs</p>
+        <p>Privacy Policy</p>
+      </div>
+    </div>
+    <div>
+      <h2 class="font-bold text-xl mt-4">SkillDrift skills</h2>
+      <div class="w-32 h-1 border-b-2 border-yellow-400 rounded-2xl my-2"></div>
+      <div class="">
+        <p onclick="window.location.href='contact.html';" class="hover:text-red-500 cursor-pointer">Contact Us</p>
+        <p>Job Assistance</p>
+        <p>Terms and Conditions</p>
+      </div>
+    </div>
+    <div>
+      <h2 class="font-bold text-xl mt-4">Products</h2>
+      <div class="w-32 h-1 border-b-2 border-yellow-400 rounded-2xl my-2"></div>
+      <div class="">
+        <p>PW Skills Lab</p>
+        <p>Job Portal</p>
+        <p>Expeirience Portal</p>
+        <p>Become an Affiliate</p>
+        <p>Hall of Fame</p>
+      </div>
+    </div>
+    <div>
+      <h2 class="font-bold text-xl mt-4">Links</h2>
+      <div class="w-32 h-1 border-b-2 border-yellow-400 rounded-2xl my-2"></div>
+      <div class="">
+        <p>Discord Channel</p>
+        <p>Pw Youtube</p>
+        <p>Careers</p>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
